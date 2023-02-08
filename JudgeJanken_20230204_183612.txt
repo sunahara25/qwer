@@ -1,0 +1,53 @@
+package abc;
+
+public class JudgeJanken{
+
+public static String judgeJanken(int user, int pc) {
+	String result = ""; // 判定結果を保存する
+
+	switch (user) {
+	case 0: // ユーザの手が0「グー」の場合
+		switch (pc) {
+		case 0:// コンピュータの手が0「グー」の場合
+			result = "あいこ";
+			break;
+		case 1:// コンピュータの手が1「チョキ」の場合
+			result = "勝ち";
+			break;
+		case 2:// コンピュータの手が2「パー」の場合
+			result = "まけ";
+			break;
+		}
+		break;
+	case 1: // ユーザの手が1「チョキ」の場合
+		switch (pc) {
+		case 0:// コンピュータの手が0「グー」の場合
+			result = "まけ";
+			break;
+		case 1:// コンピュータの手が1「チョキ」の場合
+			result = "あいこ";
+			break;
+		case 2:// コンピュータの手が2「パー」の場合
+			result = "勝ち";
+			break;
+		}
+		break;
+	case 2: // ユーザの手が2「パー」の場合
+		switch (pc) {
+		case 0:// コンピュータの手が0「グー」の場合
+			result = "勝ち";
+			break;
+		case 1:// コンピュータの手が1「チョキ」の場合
+			result = "まけ";
+			break;
+		case 2:// コンピュータの手が2「パー」の場合
+			result = "あいこ";
+			break;
+		}
+		break;
+	}
+
+	// 勝敗結果を返す
+	return result;
+}
+}
